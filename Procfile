@@ -1,1 +1,1 @@
-web: gunicorn django-elearn-platform.wsgi --log-file-
+web: gunicorn django-elearn-platform.wsgi
