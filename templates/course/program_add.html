@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block title %}{{ title }}{% endblock title %}
-{% load crispy_forms_tags %}
 {% load static %}
 
 {% block content %}
@@ -28,7 +27,6 @@
         <p class="form-title">Program Add Form</p>
         <div class="p-3"><br>
             <form action="" method="POST">{% csrf_token %}
-                <!-- {{ form|crispy }} -->
                 
                 <div class="form-group">
                     <b>{{ form.title.label }}</b>{{ form.title }}

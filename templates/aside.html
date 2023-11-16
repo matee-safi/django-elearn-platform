@@ -9,19 +9,15 @@
 
 <div id="side-nav">
 	<div class="main-menu">
-		<div class="top-side text-center py-4" style="background-image: url({% static 'img/dotted.jpg' %});">
+		<div class="top-side py-4" style="background: #161C40;">
 			<div class="desktop-hide">
-				<div class="toggle-btn" onclick="toggleSidebar()">
+				<div class="toggle-btn text-right pt-2" onclick="toggleSidebar()" style="background: #161C40;">
 					<i class="fas fa-times"></i>
 				</div>
 			</div>
-			<img src="{% static 'img/logo.jpg' %}" width="150px" alt="Logo Django LMS">
-			<p class="text-orange">
-				<mark>
-					<i class="far fa-hand-point-right"></i>
-					{{ request.user.get_user_role }}
-				</mark>
-			</p>
+			<div class="text-center">
+				<img class="text-center" src="{% static 'img/logo.jpg' %}" width="150px" alt="Logo Django LMS">
+			</div>
 		</div>
 		{% url 'home' as hom %} {% url 'dashboard' as dash %} {% url 'profile' as prof %}
 		{% url 'lecturer_list' as lec %}

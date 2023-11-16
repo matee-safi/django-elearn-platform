@@ -27,19 +27,16 @@
             <div class="container"><br>
                 <form action="" method="POST">{% csrf_token %}
                     <div class="form-group">
-                        <label for="title">Title</label>
-                        <input class="form-control" type="text" placeholder="Title" name="title" id="title" value="{{ post.title }}">
+                        <b>{{ form.title.label }}</b>{{ form.title }}
+                        <span class="danger">{{ form.title.errors }}</span>
                     </div>
                     <div class="form-group">
-                        <label for="description">Summary</label>
-                        <textarea class="form-control" placeholder="Description" name="description" id="description" rows="3">{{ post.summary }}</textarea>
+                        <b>{{ form.summary.label }}</b>{{ form.summary }}
+                        <span class="danger">{{ form.summary.errors }}</span>
                     </div>
                     <div class="form-group">
-                        <label for="posted_as">Post As</label>
-                        <select class="form-control" name="posted_as" id="post_as">
-                            <option value="1" {% if post.posted_as == 1 %}selected{% endif %}>News</option>
-                            <option value="2" {% if post.posted_as == 2 %}selected{% endif %}>Event</option>
-                        </select>
+                        <b>{{ form.posted_as.label }}</b>{{ form.posted_as }}
+                        <span class="danger">{{ form.posted_as.errors }}</span>
                     </div>
                     <input class="btn btn-primary" type="submit" value="POST">
                     <a class="btn btn-danger" href="{% url 'home' %}" style="float: right;">Cancel</a>
