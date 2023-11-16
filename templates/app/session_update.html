@@ -1,10 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}{{ title }}{% endblock title %}
-{% load crispy_forms_tags %}
 {% load static %}
 
 {% block content %}
-<div id="input-nav"><a href="{% url 'home' %}" class="primary1">Home</a> <i>&rsaquo;</i> 
+<div id="input-nav"><a href="{% url 'home' %}" class="primary1">Home</a> <i>&rsaquo;</i>
     <a href="{% url 'session_list' %}" class="primary1">Session List</a> <i>&rsaquo;</i> Session Add & update</div>
 <br>
 
@@ -28,7 +27,24 @@
             <p class="form-title">Session Add & update Form</p>
             <div class="container"><br>
                 <form action="" method="POST">{% csrf_token %}
-                    {{ form|crispy }}
+                    <div class="form-group">
+                        <b>Session</b>
+                        <input class="form-control" type="text" name="session" value="{{ session.session }}" required="">
+                        <span class="danger">{{ form.session.errors }}</span>
+                    </div>
+                    <div class="form-group">
+                        <b>Is Current Session</b>
+                        <select class="form-control" name="is_current_session" required="">
+                            <option value="True" {% if session.is_current_session == True %} selected {% endif %}>True</option>
+                            <option value="False" {% if session.is_current_session == False %} selected {% endif %}>False</option>
+                        </select>
+                        <span class="danger">{{ form.is_current_session.errors }}</span>
+                    </div>
+                    <div class="form-group">
+                        <b>Next Session Begins</b>
+                        <input class="form-control" type="date" name="next_session_begins" value="{{ session.next_session_begins }}" required="">
+                        <span class="danger">{{ form.next_session_begins.errors }}</span>
+                    </div>
                     <input class="btn btn-primary" type="submit" value="Save">
                 </form>
             </div>

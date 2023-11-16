@@ -47,7 +47,6 @@ DJANGO_APPS = [
 
 # Third party apps
 THIRD_PARTY_APPS = [
-    "crispy_forms",
     "rest_framework",
 ]
 
@@ -185,9 +184,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = env("USER_EMAIL")
 EMAIL_HOST_PASSWORD = env("USER_PASSWORD")
-
-# crispy config
-CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
