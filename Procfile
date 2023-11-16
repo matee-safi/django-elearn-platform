@@ -1,1 +1,1 @@
-web: gunicorn django-elearn-platform.wsgi
+web: gunicorn django-lms.wsgi
