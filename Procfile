@@ -1,1 +1,1 @@
-web: gunicorn django-lms.wsgi --log-file -
+web: gunicorn numberless-ladybug.wsgi
