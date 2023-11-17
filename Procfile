@@ -1,1 +1,1 @@
-web: gunicorn numberless-ladybug.wsgi
+web: gunicorn django-lms.wsgi
