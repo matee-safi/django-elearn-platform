@@ -20,7 +20,10 @@ from result.models import TakenCourse
 from app.models import Session, Semester
 from .forms import StaffAddForm, StudentAddForm, ProfileUpdateForm, ParentAddForm
 from .models import User, Student, Parent
+from django.http import HttpResponseForbidden
 
+def custom_csrf_failure(request, reason=""):
+    return HttpResponseForbidden("CSRF verification failed.")
 
 def validate_username(request):
     username = request.GET.get("username", None)
