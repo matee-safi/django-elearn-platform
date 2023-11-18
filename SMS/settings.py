@@ -173,12 +173,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = (
-    "smtp.gmail.com"  # Here i'm using gmail as the email host, but you can change it
+    "matiullahsafibbc@gmail.com"  # Here i'm using gmail as the email host, but you can change it
 )
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = env("USER_EMAIL")
-EMAIL_HOST_PASSWORD = env("USER_PASSWORD")
+EMAIL_HOST_USER = "matiullahsafibbc@gmail.com"
+EMAIL_HOST_PASSWORD = "Realfakeass44$$"
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
@@ -195,5 +195,5 @@ REST_FRAMEWORK = {
 }
 
 # Strip payment config
-STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY")
-STRIPE_PUBLISHABLE_KEY = env("STRIPE_PUBLISHABLE_KEY")
+STRIPE_SECRET_KEY = ""
+STRIPE_PUBLISHABLE_KEY = ""
