@@ -114,12 +114,15 @@ ASGI_APPLICATION = "SMS.asgi.application"
 # -----------------------------
 # NOTE: Some model fields may not work on sqlite db,
 # so consider using postgresql instead
-import dj_database_url
-
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('postgresql://postgres:a6de*2CcGfeEFF6cFD*ffg4BEEFGFbd6@viaduct.proxy.rlwy.net:51123/railway')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgresql://postgres:a6de*2CcGfeEFF6cFD*ffg4BEEFGFbd6@viaduct.proxy.rlwy.net:51123/railway',
+        'USER': 'postgres',
+        'PASSWORD': 'a6de*2CcGfeEFF6cFD*ffg4BEEFGFbd6',
+        'HOST': 'viaduct.proxy.rlwy.net',
+        'PORT': '51123',
+    }
 }
 
 # https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
@@ -175,10 +178,6 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = (
     "matiullahsafibbc@gmail.com"  # Here i'm using gmail as the email host, but you can change it
 )
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = "matiullahsafibbc@gmail.com"
-EMAIL_HOST_PASSWORD = "Realfakeass44$$"
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
