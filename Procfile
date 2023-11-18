@@ -1,1 +1,1 @@
-web: gunicorn 'django-lms.wsgi'
+web: gunicorn SMS.wsgi
