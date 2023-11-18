@@ -122,6 +122,7 @@ DATABASES = {
         "PASSWORD": "a6de*2CcGfeEFF6cFD*ffg4BEEFGFbd6",
         "HOST": "viaduct.proxy.rlwy.net",
         "PORT": "51123",
+        "USER_EMAIL": "matiullahsafibbc@gmail.com",
     }
 }
 
