@@ -29,7 +29,7 @@ SECRET_KEY = "o!ld8nrt4vc*h1zoey*wj48x*q0#ss12h=+zh)kk^6b3aygg=!"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['django-lms-production.up.railway.app', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 # change the default user models to our custom model
 AUTH_USER_MODEL = "accounts.User"
@@ -196,5 +196,3 @@ REST_FRAMEWORK = {
 # Strip payment config
 STRIPE_SECRET_KEY = ""
 STRIPE_PUBLISHABLE_KEY = ""
-
-CSRF_FAILURE_VIEW = 'django-lms-production.up.railway.app.views.custom_csrf_failure'
