@@ -117,7 +117,7 @@ ASGI_APPLICATION = "SMS.asgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgresql://postgres:a6de*2CcGfeEFF6cFD*ffg4BEEFGFbd6@viaduct.proxy.rlwy.net:51123/railway',
+        'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'a6de*2CcGfeEFF6cFD*ffg4BEEFGFbd6',
         'HOST': 'viaduct.proxy.rlwy.net',
