@@ -114,16 +114,12 @@ ASGI_APPLICATION = "SMS.asgi.application"
 # -----------------------------
 # NOTE: Some model fields may not work on sqlite db,
 # so consider using postgresql instead
+import dj_database_url
+
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "railway",
-        "USER": "postgres",
-        "PASSWORD": "a6de*2CcGfeEFF6cFD*ffg4BEEFGFbd6",
-        "HOST": "viaduct.proxy.rlwy.net",
-        "PORT": "51123",
-        "USER_EMAIL": "matiullahsafibbc@gmail.com",
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('postgresql://postgres:a6de*2CcGfeEFF6cFD*ffg4BEEFGFbd6@viaduct.proxy.rlwy.net:51123/railway')
+    )
 }
 
 # https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
